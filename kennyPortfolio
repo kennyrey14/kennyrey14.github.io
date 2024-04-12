@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenny Rey - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .bgimg-1, .bgimg-2 , .bgimg-3 {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+background-image: url("/w3images/parallax1.jpg");
+min-height: 100%;
+}
+/* Second image (Portfolio) */
+.bgimg-2 {
+background-image: url("/w3images/parallax2.jpg");
+min-height: 400px;
+}
+/* Third image (Contact) */
+.bgimg-3 {
+background-image: url("/w3images/parallax3.jpg");
+min-height: 400px;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+.bgimg-1, .bgimg-2, .bgimg-3 {
+background-attachment: scroll;
+min-height: 400px;
+}
+}
+	/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: auto;
+  overflow: hidden; /* Hide overflow to only show one image at a time */
+  padding-right: 35%;
+  padding-top: 10%;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* Three times the width of a single slide */
+  animation:slide 10s infinite; /* Adjust the duration for automatic slide change */
+}
+
+.image {
+  flex: 1;
+  height: 405px; /* Adjust the height as needed */
+  background-size: cover;
+  padding-top: 65%;
+  background-repeat: no-repeat;
+}
+
+
+@keyframes slide {
+  0% { background-image: url('https://drive.google.com/thumbnail?id=1KZjayr-ZD7wnmqXjJDOpMwc5gksyrj13&sz=w5000'); }
+  33.33% { background-image: url('https://drive.google.com/thumbnail?id=19yiJqP_FE4gPUb61jHruEvIqnh8Ojzhu&sz=w5000'); }
+  69.67% { background-image: url('https://drive.google.com/thumbnail?id=1MiFnfwVlPLftWBv4cf4ZaXwpgk4E0kfM&sz=w5000'); }
+  100% { background-image: url('https://drive.google.com/thumbnail?id=1KZjayr-ZD7wnmqXjJDOpMwc5gksyrj13&sz=w5000'); } /* Loop back to the first image */
+}
+
+@keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideRight {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+body {
+  font-family: 'Arial', sans-serif;
+  background: black;
+  color: #8e7e7e;
+}
+
+.ech4 {
+  margin: 0px;
+  margin-top: 10px;
+  display:flex;
+  font-size: 15px;
+  animation: slideIn 1.5s ease forwards; /* Use animation for 1 second */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 200px;
+}
+
+.section {
+  padding: 20px 0;
+  padding-bottom: 20px;
+  text-align: left;
+
+}
+
+.section h2 {
+  margin-bottom: 40px;
+}
+
+.portfolio-item {
+  margin-bottom: 40px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: #f7efef;
+  text-align:center;
+  padding: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #f0dddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+.portfolio-buttons {
+  display: flex;
+  margin-top: 20px;
+  padding-left: 30%;
+  padding-bottom: 20px;
+}
+
+.portfolio-buttons button {
+  padding: 10px 20px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.portfolio-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.portfolio-buttons button i {
+  margin-right: 5px;
+}
+.sticky-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a0404;
+}
+.sticky-menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure the menu stays on top of other content */
+    }
+
+.content {
+  padding-top: 50px; /* Adjust the padding to prevent content from being hidden behind the menu */
+}
+</style>
+<body>
+   <!-- Navbar (sit on top) -->
+<header>
+  <nav class="sticky-menu">
+    <div class="w3-bar" id="myNavbar" style="color:#e86060;margin: auto; width: 87%; animation: slideRight 1.5s ease forwards;">
+    <div style="padding-top: 20px;">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation
+    Menu">
+    </a>
+    <a href="#home" class="w3-bar-item w3-button" style="font-size:25px;"><i class="fa fa-home"></i>Home</a> 
+    <a href="#contact" class="w3-bar-item w3-button "style="font-size:25px;"><i class="fa fa-envelope"></i> Contact</a>
+    </div>
+    <div style="padding-left: 50%">
+    <a href="new.html" class="w3-bar-item w3-button"><img src="https://drive.google.com/thumbnail?id=1v4GprNwcJS3ph3h_7OhdBm1Qp1PVdu6B&sz=w50" style="width: 50px;"></a>
+    </div>
+    <div style="padding-left: 78%;">
+    <a href="https://www.facebook.com/kennyrey.magsayo.7" class="w3-bar-item w3-button"><i class="fa fa-facebook" style="font-size:35px;color:blue;">&nbsp;&nbsp;</i></a>
+    &nbsp;&nbsp;<a href="https://web.telegram.org/a/" class="w3-bar-item w3-button"><i class="fa fa-telegram" style="font-size:35px;color:rgb(134, 134, 249);">&nbsp;</i></a>
+    &nbsp;&nbsp;<a href="https://www.instagram.com/accounts/login/" class="w3-bar-item w3-button"><i class="fa fa-instagram" style="font-size:35px;color:rgb(241, 116, 27);">&nbsp;</i></a>
+    </div>
+    </div>
+    <div class="w3-display-middle" style="white-space:nowrap;">  
+    </div>
+</nav>
+</header>
+  <div class="ech4">
+    <div class="animated-element" style="padding-left: 8%;"> 
+    </div>
+    <div style="padding-top: 100px;">
+		<h4>Hey there,</h4><font size="9px">I'm KENNY REY MAGSAYO</font>
+			<p style="color:#ebd7d7;margin-top:20px;text-align: justify;" ><font style="color:#e86060">-Web Developer</font>
+        <p>I thrive on challenges and continuously seek to expand my skill set to stay at the forefront of web development trends. 
+          From front-end design to back-end functionality, I am proficient in a wide range of programming languages, frameworks, and technologies, 
+          enabling me to bring visions to life with precision and efficiency.</p>
+          <section id="contact" class="section">
+              <h4>Contact Me</h4>
+              <i class="fa fa-envelope" style="font-size:30px;">&nbsp;&nbsp;</i>magsayokennyrey30@gmail.com</a>
+            
+              &nbsp;&nbsp;<i class="fa fa-phone" style="font-size:30px;color:rgb(134, 134, 249);">&nbsp;</i>+63 967 802 4833</a>
+              
+          </section>
+          
+      </div>
+      <div class="slider">
+        <div class="slides">
+          <div class="image"></div>
+        </div>
+       
+        
+      </div>
+      
+      </div>
+      <div class="portfolio-buttons" >
+        <button id="shareButton" class="share-button"><i class="fa fa-share"></i> Share</button>
+        &nbsp;&nbsp;<button id="likeButton" class="like-button"><i class="fa fa-thumbs-up"></i> Like</button>
+        &nbsp;&nbsp;<button id="commentButton" class="comment-button"><i class="fa fa-comment"></i> Comment</button>
+        &nbsp;&nbsp;
+        
+        <select id="commentsDropdown" style="width: 300px;color: #570deb;border: 2px solid rgb(17, 0, 255);" >
+            <option value="">Read the comments</option>
+          </select>
+        
+      </div>
+      <form id="commentForm" style="padding-bottom: 20px;">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <textarea name="comment" placeholder="Your Comment" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+  <footer>
+    <div class="container">
+      <p>2024 Kenyot</p>
+    </div>
+  </footer>
+  <script>
+    const shareButton = document.getElementById('shareButton');
+
+shareButton.addEventListener('click', function() {
+    // Check if the Web Share API is supported
+    if (navigator.share) {
+        // If supported, call the share method
+        navigator.share({
+            title: 'Kenny Rey Portfolio',
+            text: 'Check out Kenny Rey\'s portfolio!',
+            url: window.location.href
+        })
+        .then(() => console.log('Shared successfully'))
+        .catch(error => console.error('Error sharing:', error));
+    } else {
+        // If not supported, provide a fallback option (e.g., a prompt)
+        alert('Web Share API is not supported in this browser.');
+    }
+});
+const likeButton = document.getElementById('likeButton');
+  let likesCount = 0; // Initialize the likes count
+
+  likeButton.addEventListener('click', function() {
+      // Increment the likes count
+      likesCount++;
+      
+      // Update the UI to reflect the new likes count
+      likeButton.innerHTML = `<i class="fa fa-thumbs-up"></i> Liked (${likesCount})`;
+  });
+  function addCommentOption(comment) {
+      const commentsDropdown = document.getElementById('commentsDropdown');
+      const option = document.createElement('option');
+      option.textContent = comment;
+      commentsDropdown.appendChild(option);
+    }
+
+    // Comment button functionality
+    const commentButton = document.getElementById('commentButton');
+
+    commentButton.addEventListener('click', function() {
+        // Prompt the user to input their comment
+        const comment = prompt('Enter your comment:');
+        
+        // Check if the user entered a comment
+        if (comment !== null && comment.trim() !== '') {
+            // Add the comment as an option in the dropdown menu
+            addCommentOption(comment);
+        } else {
+            // If the user cancels or leaves the comment empty
+            alert('No comment submitted.');
+        }
+    });
+
+    // Function to handle comment selection
+    function handleCommentSelection() {
+      const commentsDropdown = document.getElementById('commentsDropdown');
+      const selectedComment = commentsDropdown.value;
+      if (selectedComment) {
+        alert('Selected comment: ' + selectedComment);
+      } else {
+        alert('Please select a comment.');
+      }
+    }
+
+    // Add event listener to handle comment selection
+    document.getElementById('commentsDropdown').addEventListener('change', handleCommentSelection);
+  
+  </script>
+
+</body>
+</html>
